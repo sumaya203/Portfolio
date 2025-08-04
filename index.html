@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Sumaya</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    
+
+
+    <!-- <style> -->
+        <!-- /* Added CSS for intro background image */ -->
+        <!-- #intro { -->
+            <!-- background-image: url('MyImages/mine2.jpg'); /* Adjust path as needed */ -->
+            <!-- background-size: cover; -->
+            <!-- background-position: center; -->
+            <!-- background-repeat: no-repeat; -->
+            <!-- height: 100vh; -->
+            <!-- color: white; /* Optional: for text visibility */ -->
+            <!-- display: flex; /* Optional: vertically center content */ -->
+            <!-- align-items: center; -->
+        <!-- } -->
+    <!-- </style> -->
+
+</head>
+
+<body id="top">
+
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- ## site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Sumaya.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="index.html" class="home-link">Sumaya.</a></li>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">works</a></li>
+                        <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+
+        <!-- ## main content
+        ==================================================- -->
+        <main class="s-content">
+
+
+            <!-- ### intro
+            ================================================== -->
+
+            <section id="intro" class="s-intro target-section">
+
+  <div class="row intro-content wide">
+
+    <div class="column intro-text">
+      <div class="text-pretitle with-line">Hello</div>
+
+      <h1 class="text-huge-title" style="font-size: 36px; line-height: 1.2;">
+        I am Sumaya,<br>
+        a student<br>
+      </h1>
+    </div>
+
+    <div class="intro-image-wrapper">
+      <img src="MyImages/mine2.jpg" alt="Sumaya" class="intro-image" />
+    </div>
+
+  </div> <!-- end intro content -->
+
+  <a href="#about" class="intro-scrolldown smoothscroll" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      fill-rule="evenodd" clip-rule="evenodd">
+      <path
+        d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
+    </svg>
+  </a>
+
+</section>
+
+<style>
+  /* Background gradient with subtle shapes */
+  .s-intro {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #081627 0%, #152a46 100%);
+    overflow: hidden;
+    color: #e0e7ff;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 20px;
+  }
+
+  /* Abstract soft shape behind */
+  .s-intro::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at center, #4bc0c0, transparent 70%);
+    filter: blur(100px);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .row.intro-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 1.2s forwards;
+  }
+
+  /* Fade and slide-up animation */
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Text column */
+  .intro-text {
+    flex: 1 1 350px;
+    max-width: 450px;
+    text-align: left;
+  }
+
+  .text-pretitle.with-line {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4bc0c0;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Animated underline */
+  .text-pretitle.with-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #4bc0c0;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: underlineGrow 1s ease forwards 0.7s;
+    border-radius: 2px;
+  }
+
+  @keyframes underlineGrow {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .text-huge-title {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #e0e7ff;
+    margin: 0;
+  }
+
+  /* Image wrapper with glowing ring */
+  .intro-image-wrapper {
+    flex: 1 1 300px;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .intro-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4bc0c0;
+    box-shadow: 0 0 25px 5px #4bc0c0;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .intro-image-wrapper:hover .intro-image {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px 10px #31a9a9;
+  }
+
+  /* Scroll down arrow */
+  .intro-scrolldown {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    fill: #4bc0c0;
+    animation: floatUpDown 3s ease-in-out infinite;
+    z-index: 2;
+  }
+
+  .intro-scrolldown:hover {
+    fill: #31a9a9;
+  }
+
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-15px);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .row.intro-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .intro-text {
+      max-width: 100%;
+    }
+
+    .text-huge-title {
+      font-size: 2.5rem;
+    }
+
+    .intro-image {
+      width: 250px;
+      height: 250px;
+      border-width: 4px;
+      box-shadow: 0 0 20px 4px #4bc0c0;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .text-huge-title {
+      font-size: 2rem;
+    }
+
+    .intro-image {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
+
+
+
+
+
+
+           
+
+            <!-- ### about
+            ================================================== -->
+            
+
+
+
+            <section id="about" class="s-about target-section">
+
+
+                <div class="row about-info wide" data-animate-block>
+
+                    <div class="column lg-6 md-12 about-info__pic-block">
+                        <img src="MyImages/mine.jpg" srcset="MyImages/mine.jpg 1x, MyImages/mine.jpg 2x" alt=""
+                            class="about-info__pic" data-animate-el>
+                    </div>
+
+                    <div class="column lg-6 md-12">
+                        <div class="about-info__text">
+
+                            <h2 class="text-pretitle with-line" data-animate-el>
+                                About
+                            </h2>
+                            <p class="attention-getter" data-animate-el>
+                                I am Sumaya Akter Lima.I love crafting.In my free time,I
+                                enjoy creating handmade items like sometimes jewelry,
+                                sometimes painting,or small
+                                decorative pieces.
+                                Crafting brings me peace and alows me to
+                                express my thoughts and creativity.I also
+                                enjoy cooking and gardening.
+
+                            </p>
+                            <!-- <a href="#0" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a> -->
+
+
+                            <section id="personal-info" class="s-personal-info target-section">
+    <div class="personal-box">
+        <h2>Personal Information</h2>
+        <ul>
+            <li><strong>Name:</strong> Sumaya Akter Lima</li>
+            <li><strong>Date of Birth:</strong> December 31,2003</li>
+            <li><strong>Address:</strong>Dhaka, Bangladesh</li>
+            <li><strong>Email:</strong>sumayalima003@gmail.com</li>
+            <li><strong>Contact:</strong> +8801766228366</li>
+            <li><strong>Nationality:</strong> Bangladeshi</li>
+        </ul>
+    </div>
+</section>
+
+                        </div>
+                    </div>
+                </div> <!-- about-info -->
+
+
+                <div class="row about-expertise" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>My Hobby</h2>
+
+                        <ul class="skills-list h1" data-animate-el>
+                            <li>Cooking and Food Presentation</li>
+                            <li>Painting and Drawing</li>
+                            <li>Crafting</li>
+                            <!-- <li>Gardening With Design</li> -->
+                            <!-- <li>Prototyping</li> -->
+                            <!-- <li>Illustration</li> -->
+                        </ul>
+
+                        <section id="skills" style="padding: 50px; max-width: 600px; margin: 40px auto; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #333;">My Creative Skills</h2>
+
+  <div class="skill" style="margin-bottom: 20px;">
+    <p style="margin: 0 0 8px 0; font-weight: 600; color: #444; position: relative;">
+      Crafting <span class="percent" style="float: right; font-weight: 700; color: #666;">0%</span>
+    </p>
+    <div class="progress-bar" style="background-color: #eee; border-radius: 25px; height: 20px; overflow: hidden;">
+      <div class="progress-bar-fill crafting" data-percentage="70" style="height: 100%; width: 0; border-radius: 25px; background-color: #FF6384;"></div>
+    </div>
+  </div>
+
+  <div class="skill" style="margin-bottom: 20px;">
+    <p style="margin: 0 0 8px 0; font-weight: 600; color: #444; position: relative;">
+      Cooking <span class="percent" style="float: right; font-weight: 700; color: #666;">0%</span>
+    </p>
+    <div class="progress-bar" style="background-color: #eee; border-radius: 25px; height: 20px; overflow: hidden;">
+      <div class="progress-bar-fill cooking" data-percentage="80" style="height: 100%; width: 0; border-radius: 25px; background-color: #FFCE56;"></div>
+    </div>
+  </div>
+
+  <div class="skill" style="margin-bottom: 20px;">
+    <p style="margin: 0 0 8px 0; font-weight: 600; color: #444; position: relative;">
+      Painting <span class="percent" style="float: right; font-weight: 700; color: #666;">0%</span>
+    </p>
+    <div class="progress-bar" style="background-color: #eee; border-radius: 25px; height: 20px; overflow: hidden;">
+      <div class="progress-bar-fill painting" data-percentage="75" style="height: 100%; width: 0; border-radius: 25px; background-color: #36A2EB;"></div>
+    </div>
+  </div>
+
+  <div class="skill" style="margin-bottom: 20px;">
+    <p style="margin: 0 0 8px 0; font-weight: 600; color: #444; position: relative;">
+      Photography <span class="percent" style="float: right; font-weight: 700; color: #666;">0%</span>
+    </p>
+    <div class="progress-bar" style="background-color: #eee; border-radius: 25px; height: 20px; overflow: hidden;">
+      <div class="progress-bar-fill photography" data-percentage="50" style="height: 100%; width: 0; border-radius: 25px; background-color: #4BC0C0;"></div>
+    </div>
+  </div>
+
+  <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+
+    function animateSkills() {
+      const skillsSection = document.getElementById('skills');
+      if (!skillsSection.classList.contains('animated') && isElementInViewport(skillsSection)) {
+        skillsSection.classList.add('animated');
+
+        const skills = document.querySelectorAll('.skill');
+        skills.forEach(skill => {
+          const bar = skill.querySelector('.progress-bar-fill');
+          const percentText = skill.querySelector('.percent');
+          const target = parseInt(bar.getAttribute('data-percentage'));
+          let count = 0;
+
+          const interval = setInterval(() => {
+            if(count >= target){
+              clearInterval(interval);
+            } else {
+              count++;
+              bar.style.width = count + '%';
+              percentText.textContent = count + '%';
+            }
+          }, 20);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', animateSkills);
+    window.addEventListener('load', animateSkills);
+  </script>
+</section>
+
+
+
+                    </div>
+                </div> <!-- end about-expertise -->
+                
+
+
+                <div class="row about-timelines" data-animate-block>
+
+                    <div class="column lg-6 tab-12">
+
+                        <!-- <h2 class="text-pretitle" data-animate-el> -->
+                        <!-- Experience -->
+                        <!-- </h2> -->
+
+                        <!-- <div class="timeline" data-animate-el> -->
+
+                        <!-- <div class="timeline__block"> -->
+                        <!-- <div class="timeline__bullet"></div> -->
+                        <!-- <div class="timeline__header"> -->
+                        <!-- <h4 class="timeline__title">Dropbox</h3> -->
+                        <!-- <h5 class="timeline__meta">Product Designer</h5> -->
+                        <!-- <p class="timeline__timeframe">August 2019 - Present</p> -->
+                        <!-- </div> -->
+                        <!-- <div class="timeline__desc"> -->
+                        <!-- <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+
+                        <!-- <div class="timeline__block"> -->
+                        <!-- <div class="timeline__bullet"></div> -->
+                        <!-- <div class="timeline__header"> -->
+                        <!-- <h4 class="timeline__title">Microsoft</h4> -->
+                        <!-- <h5 class="timeline__meta">Frontend Developer</h5> -->
+                        <!-- <p class="timeline__timeframe">August 2016 - July 2019</p> -->
+                        <!-- </div> -->
+                        <!-- <div class="timeline__desc"> -->
+                        <!-- <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+
+                        <!-- </div> end timeline -->
+
+                        <!-- </div> end column -->
+
+                        <!-- <div class="column lg-6 tab-12"> -->
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Education
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">University of Asia Pacific</h3>
+                                        <h5 class="timeline__meta">B.sc in Computer Science and Engineering</h5>
+                                        <p class="timeline__timeframe">April 2023-present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>I am currently pursuing a Bachelor of Science in Computer Science and Engineering
+                                        at the University of Asia Pacific. My academic journey is helping me build a
+                                        strong foundation in core areas such as programming, algorithms, software
+                                        development, databases, and web technologies. I am passionate about
+                                        problem-solving and constantly seek opportunities to apply my knowledge through
+                                        practical projects and continuous learning. My goal is to grow as a skilled and
+                                        adaptable software engineer.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Govt. Debendra College, Manikgonj</h4>
+                                    <h5 class="timeline__meta">Higher Secondary Certificate (HSC)</h5>
+                                    <p class="timeline__timeframe">Year 2021</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>I completed my Higher Secondary Certificate (HSC) from Govt. Debendra College, Manikgonj, with a concentration in Science, achieving a GPA of 5.00 out of 5.00.
+
+This phase of my academic journey helped me build a strong foundation in Physics, Mathematics, and Computer Studies, and it further fueled my enthusiasm for a future in technology and engineering.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">S.K. Govt. Girls High School, Manikgonj</h4>
+                                    <h5 class="timeline__meta">Secondary School Certificate (SSC)</h5>
+                                    <p class="timeline__timeframe">Year 2019</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>I completed my Secondary School Certificate (SSC) from S.K. Govt. Girls’ High School, Manikgonj, achieving a GPA of 5.00 out of 5.00.
+
+My academic success in Science and Mathematics during this time laid a strong foundation for my future studies                                        
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div> <!-- end timeline -->
+
+                    </div> <!-- end column -->
+
+                    
+
+                    
+
+
+                </div> <!-- end about-timelines -->
+
+            </section> <!-- end s-about -->
+
+
+            
+
+
+            <section id="achievements" class="s-achievements target-section">
+                <div class="row section-header has-bottom-sep wide" data-animate-block>
+                    <div class="column lg-12">
+                        <h3 class="text-pretitle" data-animate-el>Achievements</h3>
+                        <h1 class="text-display-title" data-animate-el>My Awards & Achievements</h1>
+                    </div>
+                </div>
+
+                <div class="achievements-grid"style="text-align: center;">
+                    <img src="MyImages/mathOlym.jpg" alt="Math Olympiad" style="width:500px; height:auto; border-radius:10px;">
+                    <p class="image-caption">Intra University Math Olympiad 4.0</p>
+                </div>
+
+
+                <div class="achievements-grid"style="text-align: center;">
+                    <img src="MyImages/award.jpg" alt="Dean Award"style="width:500px; height:auto; border-radius:10px;">
+                    <p class="image-caption">Dean's Honor Award - UAP</p>
+                </div>
+
+                 <div class="achievements-grid"style="text-align: center;">
+                    <img src="MyImages/volunteer.jpg" alt="Volunteer Certificate - TechFest"style="width:500px; height:auto; border-radius:10px;">
+                    <p class="image-caption">Volunteer Certificate - TechFest</p>
+                </div>
+    </div>
+    </section>
+
+ <!-- ### works
+            ================================================== -->
+    <section id="works" class="s-works target-section" style="padding: 50px; max-width: 900px; margin: auto;">
+
+  <div class="row works-portfolio">
+
+    <div class="column lg-12" data-animate-block>
+
+      <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
+      <p class="h1" data-animate-el>
+        Here are some of my favorite crafts I have done lately. Feel free to check them out.
+      </p>
+
+      <!-- Filter Buttons -->
+      <div id="work-filter">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="craft" aria-pressed="false">Crafting</button>
+          <button class="filter-btn" data-filter="painting" aria-pressed="false">Painting</button>
+          <button class="filter-btn" data-filter="photography" aria-pressed="false">Photography</button>
+          <button class="filter-btn" data-filter="cooking" aria-pressed="false">Cooking</button>
+        </div>
+      </div>
+
+      <ul class="folio-list row">
+
+        <li class="folio-list__item" data-category="photography">
+          <img src="MyImages/photography.jpg" alt="Photography 1" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="craft">
+          <img src="MyImages/craft.jpg" alt="Craft 1" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="painting">
+          <img src="MyImages/painting1.jpg" alt="Painting 1" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="painting">
+          <img src="MyImages/painting2.jpg" alt="Painting 2" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="painting">
+          <img src="MyImages/painting3.jpg" alt="Painting 3" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="cooking">
+          <img src="MyImages/cooking1.jpg" alt="Cooking 1" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="cooking">
+          <img src="MyImages/cooking2.jpg" alt="Cooking 2" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="craft">
+          <img src="MyImages/craft2.jpg" alt="Craft 2" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+        <li class="folio-list__item" data-category="painting">
+          <img src="MyImages/painting4.jpg" alt="Painting 4" style="width: 100%; height: 250px; object-fit: cover;">
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  <script>
+    const filterButtons = document.querySelectorAll('#work-filter .filter-btn');
+    const items = document.querySelectorAll('.folio-list__item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
+
+        const filter = button.getAttribute('data-filter');
+
+        if (filter === 'all') {
+          items.forEach(item => item.style.display = 'block');
+        } else {
+          items.forEach(item => {
+            if (item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+  <style>
+    /* Filter Buttons Container */
+    #work-filter {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 8px;
+    }
+
+    /* Group for filter buttons */
+    #work-filter .filter-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    /* Smaller buttons */
+    #work-filter .filter-btn {
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      outline: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    #work-filter .filter-btn:hover {
+      background-color: #333;
+      box-shadow: 0 7px 20px rgba(50, 50, 50, 0.7);
+      transform: translateY(-2px);
+    }
+
+    #work-filter .filter-btn.active {
+      background-color: #555;
+      box-shadow: 0 9px 26px rgba(80, 80, 80, 0.9);
+      font-weight: 700;
+      transform: translateY(-3px);
+    }
+
+    /* Portfolio Grid */
+    .folio-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0;
+      list-style: none;
+    }
+  </style>
+
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+                <!-- <ul class="folio-list row block-lg-one-half block-stack-on-1000"> -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-01"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="MyImages/photography.jpg" alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Website -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- My Photography. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-02"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="images/portfolio/lamp.jpg" -->
+                                    <!-- srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Product Design -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- The White Lamp. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-03"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="images/portfolio/rucksack.jpg" -->
+                                    <!-- srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x" -->
+                                    <!-- alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Branding -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- Rucksuck. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-04"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="images/portfolio/skaterboy.jpg" -->
+                                    <!-- srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" -->
+                                    <!-- alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Website -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- Since Day One. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-05"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="images/portfolio/sanddunes.jpg" -->
+                                    <!-- srcset="images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x" -->
+                                    <!-- alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Illustration -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- Sand Dunes. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                    <!-- <li class="folio-list__item column" data-animate-el> -->
+                        <!-- <a class="folio-list__item-link" href="#modal-06"> -->
+                            <!-- <div class="folio-list__item-pic"> -->
+                                <!-- <img src="images/portfolio/minimalismo.jpg" -->
+                                    <!-- srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" -->
+                                    <!-- alt=""> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="folio-list__item-text"> -->
+                                <!-- <div class="folio-list__item-cat"> -->
+                                    <!-- Branding -->
+                                <!-- </div> -->
+                                <!-- <div class="folio-list__item-title"> -->
+                                    <!-- Minimalismo. -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </a> -->
+                        <!-- <a class="folio-list__proj-link" href="#" title="project link"> -->
+                            <!-- <svg width="15" height="15" viewBox="0 0 15 15" fill="none" -->
+                                <!-- xmlns="http://www.w3.org/2000/svg"> -->
+                                <!-- <path -->
+                                    <!-- d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" -->
+                                    <!-- fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path> -->
+                            <!-- </svg> -->
+                        <!-- </a> -->
+                    <!-- </li> end folio-list__item -->
+
+                <!-- </ul> end folio-list -->
+
+            <!-- </div> end column -->
+
+
+            <!-- Modal Templates Popup
+                    -------------------------------------------- -->
+            <!-- <div id="modal-01" hidden> -->
+                <!-- <div class="modal-popup"> -->
+                    <!-- <img src="images/portfolio/gallery/g-fuji.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>Retro Camera</h5> -->
+                        <!-- <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem -->
+                            <!-- alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Branding</li> -->
+                            <!-- <li>Product Design</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+            <!-- <div id="modal-02" hidden> -->
+                <!-- <div class="modal-popup"> -->
+                    <!-- <img src="images/portfolio/gallery/g-lamp.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>The White Lamp</h5> -->
+                        <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum -->
+                            <!-- auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Branding</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+            <!-- <div id="modal-03" hidden> -->
+                <!-- <div class="modal-popup"> -->
+                    <!-- <img src="images/portfolio/gallery/g-rucksack.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>Rucksuck</h5> -->
+                        <!-- <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti -->
+                            <!-- quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Product Design</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+            <!-- <div id="modal-04" hidden> -->
+                <!-- <div class="modal-popup"> -->
+                    <!-- <img src="images/portfolio/gallery/g-skaterboy.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>Since Day One</h5> -->
+                        <!-- <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem -->
+                            <!-- voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Website</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+            <!-- <div id="modal-05" hidden> -->
+                <!-- <div class="modal-popup"> -->
+
+                    <!-- <img src="images/portfolio/gallery/g-sanddunes.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>Sand Dunes</h5> -->
+                        <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum -->
+                            <!-- auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Illustration</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+            <!-- <div id="modal-06" hidden> -->
+                <!-- <div class="modal-popup"> -->
+                    <!-- <img src="images/portfolio/gallery/g-minimalismo.jpg" alt=""> -->
+
+                    <!-- <div class="modal-popup__desc"> -->
+                        <!-- <h5>Minimalismo</h5> -->
+                        <!-- <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia -->
+                            <!-- cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p> -->
+                        <!-- <ul class="modal-popup__cat"> -->
+                            <!-- <li>Branding</li> -->
+                            <!-- <li>Product Design</li> -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+
+                    <!-- <a href="https://www.behance.net/" class="modal-popup__details">Project link</a> -->
+                <!-- </div> -->
+            <!-- </div> end modal -->
+
+        </div> <!-- end works-portfolio -->
+
+
+        <!-- <div class="row testimonials"> -->
+            <!-- <div class="column lg-12" data-animate-block> -->
+
+                <!-- <div class="swiper-container testimonial-slider" data-animate-el> -->
+
+                    <!-- <div class="swiper-wrapper"> -->
+
+                        <!-- <div class="testimonial-slider__slide swiper-slide"> -->
+                            <!-- <div class="testimonial-slider__author"> -->
+                                <!-- <img src="images/avatars/user-02.jpg" alt="Author image" -->
+                                    <!-- class="testimonial-slider__avatar"> -->
+                                <!-- <cite class="testimonial-slider__cite"> -->
+                                    <!-- <strong>Tim Cook</strong> -->
+                                    <!-- <span>CEO, Apple</span> -->
+                                <!-- </cite> -->
+                            <!-- </div> -->
+                            <!-- <p> -->
+                                <!-- Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas -->
+                                <!-- tempore rem. -->
+                                <!-- Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores -->
+                                <!-- quaerat fuga rem nihil nostrum. -->
+                                <!-- Laudantium quia consequatur molestias delectus culpa. -->
+                            <!-- </p> -->
+                        <!-- </div> end testimonial-slider__slide -->
+
+                        <!-- <div class="testimonial-slider__slide swiper-slide"> -->
+                            <!-- <div class="testimonial-slider__author"> -->
+                                <!-- <img src="images/avatars/user-03.jpg" alt="Author image" -->
+                                    <!-- class="testimonial-slider__avatar"> -->
+                                <!-- <cite class="testimonial-slider__cite"> -->
+                                    <!-- <strong>Sundar Pichai</strong> -->
+                                    <!-- <span>CEO, Google</span> -->
+                                <!-- </cite> -->
+                            <!-- </div> -->
+                            <!-- <p> -->
+                                <!-- Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos -->
+                                <!-- repellat voluptas animi adipisci. -->
+                                <!-- Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium -->
+                                <!-- perspiciatis. -->
+                                <!-- Quasi voluptas eius distinctio. Atque eos maxime. -->
+                            <!-- </p> -->
+                        <!-- </div> end testimonial-slider__slide -->
+
+                        <!-- <div class="testimonial-slider__slide swiper-slide"> -->
+                            <!-- <div class="testimonial-slider__author"> -->
+                                <!-- <img src="images/avatars/user-01.jpg" alt="Author image" -->
+                                    <!-- class="testimonial-slider__avatar"> -->
+                                <!-- <cite class="testimonial-slider__cite"> -->
+                                    <!-- <strong>Satya Nadella</strong> -->
+                                    <!-- <span>CEO, Microsoft</span> -->
+                                <!-- </cite> -->
+                            <!-- </div> -->
+                            <!-- <p> -->
+                                <!-- Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil -->
+                                <!-- ea quia nesciunt. Ducimus aut sed ipsam. -->
+                                <!-- Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas -->
+                                <!-- eius distinctio. -->
+                                <!-- Voluptatem dignissimos ut. -->
+                            <!-- </p> -->
+                        <!-- </div> end testimonial-slider__slide -->
+
+                        <!-- <div class="testimonial-slider__slide swiper-slide"> -->
+                            <!-- <div class="testimonial-slider__author"> -->
+                                <!-- <img src="images/avatars/user-06.jpg" alt="Author image" -->
+                                    <!-- class="testimonial-slider__avatar"> -->
+                                <!-- <cite class="testimonial-slider__cite"> -->
+                                    <!-- <strong>Jeff Bezos</strong> -->
+                                    <!-- <span>CEO, Amazon</span> -->
+                                <!-- </cite> -->
+                            <!-- </div> -->
+                            <!-- <p> -->
+                                <!-- Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel -->
+                                <!-- dui. In ac felis -->
+                                <!-- quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at -->
+                                <!-- corrupti expedita voluptas odit. -->
+                                <!-- Nihil ea quia nesciunt. Ducimus aut sed ipsam. -->
+                            <!-- </p> -->
+                        <!-- </div> end testimonial-slider__slide -->
+
+                    <!-- </div> end swiper-wrapper -->
+
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- </div> end swiper-container -->
+
+            <!-- </div> end column -->
+        <!-- </div> end row testimonials -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- ### contact
+            ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="row contact-top">
+            <div class="column lg-12">
+                <h2 class="text-pretitle">
+                    Get In Touch
+                </h2>
+
+                <p class="h1">
+                    I love to hear from you.
+                    Whether you have a question or just
+                    want to chat about craft & art — shoot me a message.
+                </p>
+            </div>
+        </div> <!-- end contact-top -->
+
+        <div class="row contact-bottom">
+            <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                <h3 class="text-pretitle">Reach me at</h3>
+                <p class="contact-links">
+                    <a href="mailto:sayhello@luther.com" class="mailtoui">23101041@uap-bd.edu</a> <br>
+                    <a href="tel:+1975432345">+880 176 622 8366</a>
+                </p>
+            </div>
+            <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+                <h3 class="text-pretitle">Social</h3>
+                <ul class="contact-social">
+                    <!-- <li><a href="#0">Behance</a></li> -->
+                    <!-- <li><a href="#0">Dribble</a></li> -->
+                    <li><a href="https://www.facebook.com/sumaya.lima.58/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=lx95ud7">Instagram</a></li>
+                    <!-- <li><a href="">Github</a></li> -->
+                </ul>
+            </div>
+            <div class="column lg-4 md-12 contact-block">
+                <a href="mailto:23101043@uap-bd.edu" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say
+                    Hello.</a>
+            </div>
+        </div> <!-- end contact-bottom -->
+
+    </section> <!-- end contact -->
+
+    </main> <!-- end s-content -->
+
+
+    <!-- ## footer
+        ================================================== -->
+    <!-- <footer class="s-footer"> -->
+
+    <!-- <div class="row"> -->
+    <!-- <div class="column ss-copyright"> -->
+    <!-- <span>© Copyright Luther 2021</span>  -->
+    <!-- <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">Themewagon</a></span> -->
+    <!-- </div> -->
+
+    <!-- <div class="ss-go-top"> -->
+    <!-- <a class="smoothscroll" title="Back to Top" href="#top"> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> -->
+    <!-- </a> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- </footer> end s-footer -->
+
+    <!-- </div> end -s-pagewrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
