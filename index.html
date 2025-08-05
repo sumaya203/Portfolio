@@ -111,22 +111,44 @@
       <div style="color: #64ffda; font-size: 18px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
         Hello, I'm
       </div>
-      <h1 style="font-size: 42px; font-weight: 800; margin: 0 0 10px;">Sumaya Akter Lima</h1>
-      <h2 style="font-size: 24px; font-weight: 400; color: #ccd6f6;">A Student Who Loves Crafting</h2>
-      <p style="margin-top: 20px; font-size: 16px; line-height: 1.6; color: #8892b0;">
-        I’m a student who finds joy in creativity. Crafting is not just a hobby for me — it’s a way to express myself and bring ideas to life with my hands.
+      <h1 style="font-size: 46px; font-weight: 800; margin: 0 0 10px; color: #e6f1ff;">
+        Sumaya Akter Lima
+      </h1>
+      <h2 style="font-size: 24px; font-weight: 500; margin-bottom: 20px; color: #a8b2d1;">
+        A Student Who Loves Crafting
+      </h2>
+      <p style="font-size: 16px; line-height: 1.6; color: #8892b0;">
+        I’m a student who finds joy in creativity. Crafting is not just a hobby — it’s a way to express myself and bring ideas to life through my hands.
       </p>
       <p style="margin-top: 10px; font-size: 16px; line-height: 1.6; color: #8892b0;">
-        From handmade designs to personal DIY projects, I love exploring beauty in small details and making something meaningful.
+        From handmade designs to DIY projects, I love exploring beauty in small details and creating something meaningful.
       </p>
-      <a href="#about" class="smoothscroll" style="display: inline-block; margin-top: 30px; padding: 12px 24px; background: #64ffda; color: #0a192f; font-weight: 600; border-radius: 5px; text-decoration: none;">
+      <a href="#about" class="smoothscroll" style="display: inline-block; margin-top: 30px; padding: 12px 28px; background: #64ffda; color: #0a192f; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background 0.3s;">
         Learn More About Me
       </a>
     </div>
 
-    <!-- Profile Image -->
+    <!-- Profile Image (Perfect Circle) -->
     <div class="column intro-image-wrapper" style="flex: 1 1 300px; text-align: center;">
-      <img src="MyImages/mine2.jpg" alt="Sumaya" style="width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 4px solid #64ffda; box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);" />
+      <div style="
+        width: 280px;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #64ffda;
+        box-shadow: 0 12px 25px rgba(100, 255, 218, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <img src="MyImages/mine.jpg" alt="Sumaya" style="
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        " />
+      </div>
     </div>
 
   </div>
@@ -734,44 +756,64 @@
   </div>
 
   <style>
-    /* Filter Bar */
+    /* Filter Bar Container */
     #work-filter {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 25px;
-      padding: 10px 15px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       background: #E2E8F0;
       border-radius: 30px;
-      overflow-x: auto;
+      padding: 8px 12px;
+      margin-bottom: 25px;
     }
 
     .filter-group {
       display: flex;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      white-space: nowrap; /* Prevent text wrapping */
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .filter-btn {
-      background-color: #0F172A;
-      color: #FFF;
-      padding: 8px 16px;
-      font-size: 13px;
+      background-color: transparent;
+      color: #0F172A;
+      padding: 8px 18px;
+      font-size: 14px;
       font-weight: 600;
-      border: none;
+      border: 2px solid transparent;
       border-radius: 20px;
-      transition: all 0.3s ease;
       cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+      user-select: none;
+      flex-shrink: 0; /* Prevent shrinking to keep visible */
     }
 
     .filter-btn:hover {
-      background-color: #2563EB;
+      background-color: #CBD5E1;
+      color: #1E40AF;
     }
 
     .filter-btn.active {
       background-color: #1E40AF;
-      box-shadow: 0 4px 14px rgba(30, 64, 175, 0.4);
+      color: #FFFFFF;
+      border-color: #1E40AF;
     }
 
-    /* 4-Column Grid */
+    /* Optional: Hide scrollbar but keep scroll */
+    #work-filter::-webkit-scrollbar {
+      height: 6px;
+    }
+    #work-filter::-webkit-scrollbar-thumb {
+      background: rgba(30, 64, 175, 0.4);
+      border-radius: 3px;
+    }
+    #work-filter::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Portfolio Grid */
     .folio-list {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -783,13 +825,13 @@
     .folio-list__item {
       overflow: hidden;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .folio-list__item:hover {
       transform: scale(1.02);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     .folio-list__item img {
@@ -819,32 +861,33 @@
   </style>
 
   <script>
-    const filterButtons = document.querySelectorAll('#work-filter .filter-btn');
-    const items = document.querySelectorAll('.folio-list__item');
+    document.addEventListener("DOMContentLoaded", function () {
+      const filterButtons = document.querySelectorAll('#work-filter .filter-btn');
+      const items = document.querySelectorAll('.folio-list__item');
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-pressed', 'false');
-        });
-        button.classList.add('active');
-        button.setAttribute('aria-pressed', 'true');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+          });
 
-        const filter = button.getAttribute('data-filter');
+          button.classList.add('active');
+          button.setAttribute('aria-pressed', 'true');
 
-        items.forEach(item => {
-          if (filter === 'all' || item.getAttribute('data-category') === filter) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
+          const filter = button.getAttribute('data-filter');
+
+          items.forEach(item => {
+            item.style.display =
+              filter === 'all' || item.getAttribute('data-category') === filter
+                ? 'block'
+                : 'none';
+          });
         });
       });
     });
   </script>
 </section>
-
 
     
 
